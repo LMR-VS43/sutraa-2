@@ -1,355 +1,964 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SUTRAA — Effortless Styles for Your Story</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  </head>
-  <body>
-    <header class="nav-wrap">
-      <nav class="navbar container">
-        <div class="brand">
-          <img src="assets/logo.png" alt="SUTRAA" class="brand-logo">
-        </div>
-        <ul class="nav-links">
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Tops</a></li>
-          <li><a href="#">Bottoms</a></li>
-          <li><a href="#">Dresses</a></li>
-          <li><a href="#" class="cart" aria-label="Cart">
-            <!-- simple cart icon -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 6H21L20 12H8L6 6Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="10" cy="19" r="1" stroke="currentColor" stroke-width="1.2"/>
-              <circle cx="18" cy="19" r="1" stroke="currentColor" stroke-width="1.2"/>
-            </svg>
-          </a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SUTRAA — Effortless Styles for Your Story</title>
+  <meta name="description" content="Handcrafted ethnic & fusion tops for the modern woman. Cotton, block-print, tie-dye, embroidered — made with intention. Free shipping on orders over ₹499." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
 
-    <main>
-      <section class="hero">
-        <div class="hero-bg" role="img" aria-label="Model in golden field, summer breeze">
-          <!-- Local hero image (place your attached image at assets/hero.jpg) -->
-          <img src="assets/hero.jpg" alt="Model in golden field, summer breeze" />
+  <!-- ═══════════ TOP BAR (Trust & Safety strip) ═══════════ -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="trust-badge">
+        <i class="fas fa-lock"></i> Secure Checkout
+        <i class="fas fa-truck"></i> Free Shipping over ₹499
+        <i class="fas fa-rotate-left"></i> 7-Day Easy Returns
+      </div>
+      <div class="top-bar-cta">
+        <a href="https://wa.me/c/917208815471" class="wa-top">
+          <i class="fab fa-whatsapp"></i> Order via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <header class="nav-wrap">
+    <nav class="navbar container">
+      <div class="brand">
+        <a href="#"><img src="assets/logo.png" alt="SUTRAA" class="brand-logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#new-arrivals">New Arrivals</a></li>
+        <li><a href="#tops">Tops</a></li>
+        <li><a href="#bottoms">Bottoms</a></li>
+        <li><a href="#dresses">Dresses</a></li>
+        <li><a href="#influencers">Creator Reels</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn-search" aria-label="Search"><i class="fas fa-search"></i></button>
+        <button class="icon-btn-cart" id="cartToggle" aria-label="Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="assets/hero.jpg" alt="Model in golden field, summer breeze" />
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content container">
+        <span class="hero-label">Handcrafted. Cotton. Timeless.</span>
+        <h1 class="hero-brand">SUTRAA</h1>
+        <p class="hero-tag">Effortless Styles for Your Story</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#new-arrivals">Shop the Collection</a>
+          <a class="btn btn-ghost" href="#about">Discover More</a>
         </div>
-        <div class="hero-content container">
-          <h1 class="hero-brand">SUTRAA</h1>
-          <p class="hero-tag">Effortless Styles for Your Story</p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#featured">Shop the Collection</a>
-            <a class="btn btn-ghost" href="#about">Discover More</a>
+        <div class="hero-trust-row">
+          <span>✦ No Hidden Charges</span>
+          <span>✦ Secure Payment</span>
+          <span>✦ Ships in 24h</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SOCIAL PROOF BAR (Instagram followers + ratings) ═══════════ -->
+    <section class="social-proof-bar">
+      <div class="container proof-inner">
+        <div class="proof-item">
+          <i class="fab fa-instagram"></i>
+          <div>
+            <div class="proof-num">12K+</div>
+            <div class="proof-label">Instagram Followers</div>
           </div>
         </div>
-      </section>
+        <div class="proof-item">
+          <i class="fas fa-star"></i>
+          <div>
+            <div class="proof-num">4.8 ★</div>
+            <div class="proof-label">Average Rating</div>
+          </div>
+        </div>
+        <div class="proof-item">
+          <i class="fas fa-users"></i>
+          <div>
+            <div class="proof-num">2,500+</div>
+            <div class="proof-label">Happy Customers</div>
+          </div>
+        </div>
+        <div class="proof-item">
+          <i class="fas fa-headcount"></i>
+          <div>
+            <div class="proof-num">15+</div>
+            <div class="proof-label">Creator Collaborations</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="featured" class="featured container">
-        <div class="section-header">
-          <hvcnggtton and hand-finished details — selected for ease and comfort.</p>
+    <!-- ═══════════ NEW ARRIVALS / FEATURED PRODUCTS ═══════════ -->
+    <section id="new-arrivals" class="featured container">
+      <div class="section-header">
+        <h2>New Arrivals</h2>
+        <p class="muted">Fresh from our atelier — handcrafted pieces for the season ahead.</p>
+        <div class="section-tabs">
+          <button class="tab active" data-tab="all">All</button>
+          <button class="tab" data-tab="tops">Tops</button>
+          <button class="tab" data-tab="dresses">Dresses</button>
+          <button class="tab" data-tab="ethnic">Ethnic</button>
+        </div>
+      </div>
+
+      <div class="cards-grid" id="productsGrid">
+        <!-- Rangrez -->
+        <article class="card" data-category="tops ethnic" data-description="Step into colour with Rangrez — a beautifully crafted tie-dye pullover that captures the spirit of effortless fashion. Made from soft, breathable cotton, each piece is hand-dyed, making every Rangrez unique. Perfect for casual outings, brunches, or festive gatherings." data-price="300">
+          <div class="card-media">
+            <img src="assets/rangrez.jpg" alt="Rangrez Tie-Dye Pullover" />
+            <div class="card-badge new">NEW</div>
+            <div class="card-hover">
+              <button class="icon-btn" data-quickview="true">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-category">Tops • Tie-Dye</div>
+            <h3 class="card-title">Rangrez Tie-Dye Pullover</h3>
+            <div class="card-meta">
+              <span class="price">₹300</span>
+              <div class="card-actions">
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <a href="#" class="view-link" data-quickview="true">View Details</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tejshri -->
+        <article class="card" data-category="tops ethnic" data-description="Add a touch of heritage to your everyday wardrobe with Tejshri — a stunning hand-block printed cotton tunic top. Designed with delicate straps and intricate Indian block patterns, it blends modern comfort with traditional charm. Lightweight, breezy, and elegant." data-price="300">
+          <div class="card-media">
+            <img src="assets/tejshri.jpg" alt="Tejshri Hand-Block Print Cotton Strappy Tunic Top" />
+            <div class="card-badge new">NEW</div>
+            <div class="card-hover">
+              <button class="icon-btn" data-quickview="true">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-category">Tops • Block Print</div>
+            <h3 class="card-title">Tejshri Hand-Block Print Cotton Strappy Tunic Top</h3>
+            <div class="card-meta">
+              <span class="price">₹300</span>
+              <div class="card-actions">
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <a href="#" class="view-link" data-quickview="true">View Details</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Siyara -->
+        <article class="card" data-category="tops ethnic" data-description="Siyara reflects timeless elegance and artisanal craftsmanship. This handcrafted ethnic top is designed for the modern woman who values tradition and style. With detailed embroidery and soft, flowy fabric, it is perfect for festive occasions, family gatherings, or chic casual wear." data-price="300">
+          <div class="card-media">
+            <img src="assets/siyara.jpg" alt="Siyara – Elegant Handcrafted Ethnic Top for Women | Sutraa" />
+            <div class="card-badge soldout">BESTSELLER</div>
+            <div class="card-hover">
+              <button class="icon-btn" data-quickview="true">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-category">Tops • Embroidered</div>
+            <h3 class="card-title">Siyara – Elegant Handcrafted Ethnic Top</h3>
+            <div class="card-meta">
+              <span class="price">₹300</span>
+              <div class="card-actions">
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <a href="#" class="view-link" data-quickview="true">View Details</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kashish -->
+        <article class="card" data-category="tops ethnic" data-description="Grace meets craftsmanship in Kashish, a hand-embroidered ethnic kurti that celebrates Indian artistry. Its detailed needlework and rich hues bring sophistication to any occasion. Made from premium cotton for all-day comfort." data-price="350" data-images="assets/kashish.jpg, assets/kashish.jpeg">
+          <div class="card-media">
+            <img src="assets/kashish.jpg" alt="Kashish – Exquisite Hand-Embroidered Ethnic Kurti for Women | Sutraa" />
+            <div class="card-badge new">NEW</div>
+            <div class="card-hover">
+              <button class="icon-btn" data-quickview="true">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-category">Kurti • Hand-Embroidered</div>
+            <h3 class="card-title">Kashish – Exquisite Hand-Embroidered Kurti</h3>
+            <div class="card-meta">
+              <span class="price">₹350</span>
+              <div class="card-actions">
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <a href="#" class="view-link" data-quickview="true">View Details</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Noor -->
+        <article class="card" data-category="dresses ethnic" data-description="Radiate grace with Noor, a flowing cotton kurta dress designed for comfort and beauty. Its lightweight fabric and fluid silhouette make it ideal for both daily wear and special occasions. Subtle details and soothing colours create an aura of effortless charm." data-price="300">
+          <div class="card-media">
+            <img src="assets/noor.jpg" alt="Noor Flowing Cotton Kurtai Dress" />
+            <div class="card-badge soldout">POPULAR</div>
+            <div class="card-hover">
+              <button class="icon-btn" data-quickview="true">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-category">Dress • Cotton Kurta</div>
+            <h3 class="card-title">Noor Flowing Cotton Kurtai Dress</h3>
+            <div class="card-meta">
+              <span class="price">₹300</span>
+              <div class="card-actions">
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <a href="#" class="view-link" data-quickview="true">View Details</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- The Sutraa Designer Collective -->
+        <article class="card" data-category="dresses ethnic" data-description="Discover Sutraa's complete designer collection — featuring Rangrez, Tejshri, Siyara, Kashish, and Noor. Each piece is a blend of traditional artistry and modern design, handcrafted to reflect individuality and cultural elegance. Shop all five signature looks and express your unique Sutraa story." data-price="1499" data-images="assets/collective.jpg">
+          <div class="card-media">
+            <img src="assets/collective.jpg" alt="The Sutraa Designer Collective – Shop All 5 Signature Brands in One Place" />
+            <div class="card-badge bundle">BUNDLE</div>
+            <div class="card-hover">
+              <button class="icon-btn" data-quickview="true">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-category">Collection • 5-Piece Bundle</div>
+            <h3 class="card-title">The Sutraa Designer Collective</h3>
+            <div class="card-meta">
+              <span class="price">₹1,499</span>
+              <div class="card-actions">
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+                <a href="#" class="view-link" data-quickview="true">View Details</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ═══════════ TRUST / WHY SUTRAA ═══════════ -->
+    <section class="why-sutraa">
+      <div class="container why-inner">
+        <div class="why-badge">
+          <i class="fas fa-seedling"></i>
+          <div>
+            <h3>Why SUTRAA?</h3>
+            <p class="muted">Every piece tells a story of craft, care, and conscious choice.</p>
+          </div>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <i class="fas fa-hand-sparkles"></i>
+            <h4>Handcrafted</h4>
+            <p class="muted">Each garment is hand-dyed, block-printed, or embroidered by skilled artisans — no two pieces are identical.</p>
+          </div>
+          <div class="why-card">
+            <i class="fas fa-shirt"></i>
+            <h4>Natural Fabrics</h4>
+            <p class="muted">100% cotton, breathable and gentle on skin. Sibling to the seasons — from summer breezes to winter layering.</p>
+          </div>
+          <div class="why-card">
+            <i class="fas fa-rotate-left"></i>
+            <h4>7-Day Easy Returns</h4>
+            <p class="muted">Not the right fit? Exchange or return within 7 days — no questions asked. Your confidence comes first.</p>
+          </div>
+          <div class="why-card">
+            <i class="fas fa-truck-fast"></i>
+            <h4>Free Shipping</h4>
+            <p class="muted">On all orders above ₹499. Delivered to your doorstep in 3–5 business days across India.</p>
+          </div>
+          <div class="why-card">
+            <i class="fas fa-indian-rupee-sign"></i>
+            <h4>Secure Payments</h4>
+            <p class="muted">Pay via UPI, Card, Net Banking, or WhatsApp. Your data is encrypted and never stored without permission.</p>
+          </div>
+          <div class="why-card">
+            <i class="fas fa-heart"></i>
+            <h4>Made with Intention</h4>
+            <p class="muted">From sourcing to stitching — every step is guided by respect for the craft and the people behind it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ EDITORIAL BANNER: STORY ═══════════ -->
+    <section class="editorial-banner container">
+      <div class="editorial-left">
+        <span class="editorial-label">The Sutraa World</span>
+        <h2>Crafting Comfort.<br>Defining Style.</h2>
+        <p class="editorial-copy">SUTRAA blends natural fabrics with timeless silhouettes — pieces designed to travel with you through the seasons. Each garment is made with intention and care, bridging the gap between heritage craft and everyday elegance.</p>
+        <a href="#about" class="btn btn-ghost-lined">Read Our Story →</a>
+      </div>
+      <div class="editorial-right">
+        <div class="editorial-img-wrap">
+          <img src="assets/collective.jpg" alt="Sutraa collection" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SUBSCRIPTION / EMAIL CAPTURE ═══════════ -->
+    <section class="subscribe-section">
+      <div class="container subscribe-inner">
+        <div class="subscribe-text">
+          <h3>Join the SUTRAA Circle</h3>
+          <p>Be the first to know about new drops, artisan stories, and exclusive offers.</p>
+          <div class="subscribe-form">
+            <input type="email" placeholder="Enter your email" class="subscribe-input" />
+            <button class="btn btn-primary subscribe-btn">Subscribe</button>
+          </div>
+          <p class="muted subscribe-note">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CUSTOMER REVIEWS / TESTIMONIALS ═══════════ -->
+    <section id="reviews" class="reviews-section container">
+      <div class="section-header">
+        <h2>What Our Customers Say</h2>
+        <p class="muted">Real stories from real women who wear SUTRAA.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <h4>"Absolutely love the Tejshri top!"</h4>
+          <p class="muted">The hand-block print is even more beautiful in person. Got compliments at every event. Fabric is so soft and comfortable.</p>
+          <div class="reviewer">
+            <img src="assets/avatar1.jpg" alt="Priya" class="reviewer-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>P</text></svg>'">
+            <div>
+              <strong>Priya S.</strong><br>
+              <span class="muted">Mumbai · Verified Buyer</span>
+            </div>
+          </div>
         </div>
 
-        <div class="cards-grid">
-          <!-- Rangrez Tie-Dye Pullover Card -->
-          <article class="card" data-description="Step into color with Rangrez, a beautifully crafted tie-dye pullover that captures the spirit of effortless fashion. Made from soft, breathable cotton, this pullover combines comfort with bold artistry. Each piece is hand-dyed, making every Rangrez unique — perfect for casual outings, brunches, or festive gatherings.">
-            <div class="card-media">
-              <img src="assets/rangrez.jpg" alt="Rangrez Tie-Dye Pullover - Handcrafted Fashion" />
-              <div class="card-hover">
-                <button class="icon-btn" title="Quick view">Quick View</button>
-              </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <h4>"Kashish kurti — my new favourite!"</h4>
+          <p class="muted">The embroidery is so detailed. Fits perfectly and the cotton is lightweight yet opaque. Will definitely order more colours.</p>
+          <div class="reviewer">
+            <img src="assets/avatar2.jpg" alt="Anjali" class="reviewer-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>A</text></svg>'">
+            <div>
+              <strong>Anjali M.</strong><br>
+              <span class="muted">Delhi · Verified Buyer</span>
             </div>
-            <div class="card-body">
-              <h3 class="card-title">Rangrez Tie-Dye Pullover</h3>
-              <div class="card-meta">
-                <span class="price">Rs 300</span>
-                <a href="#" class="view-link">View Product</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Tejshri Card -->
-          <article class="card" data-description="Add a touch of heritage to your everyday wardrobe with Tejshri, a stunning hand-block printed cotton tunic top. Designed with delicate straps and intricate Indian block patterns, it blends modern comfort with traditional charm. Lightweight, breezy, and elegant — ideal for summer days and festive evenings alike.">
-            <div class="card-media">
-              <img src="assets/tejshri.jpg" alt="Tejshri Hand-Block Print Cotton Strappy Tunic Top" />
-              <div class="card-hover">
-                <button class="icon-btn" title="Quick view">Quick View</button>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Tejshri Hand-Block Print Cotton Strappy Tunic Top</h3>
-              <div class="card-meta">
-                <span class="price">Rs 300</span>
-                <a href="#" class="view-link">View Product</a>
-              </div>
-            </div>
-          </article>
-          <!-- Siyara Card -->
-          <article class="card" data-description="Siyara reflects timeless elegance and artisanal craftsmanship. This handcrafted ethnic top is designed for the modern woman who values tradition and style. With its detailed embroidery and soft, flowy fabric, Siyara is perfect for festive occasions, family gatherings, or chic casual wear.">
-            <div class="card-media">
-              <img src="assets/siyara.jpg" alt="Siyara – Elegant Handcrafted Ethnic Top for Women | Sutraa" />
-              <div class="card-hover">
-                <button class="icon-btn" title="Quick view">Quick View</button>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Siyara – Elegant Handcrafted Ethnic Top for Women | Sutraa</h3>
-              <div class="card-meta">
-                <span class="price">Rs 300</span>
-                <a href="#" class="view-link">View Product</a>
-              </div>
-            </div>
-          </article>
-          <!-- Kashish Card -->
-          <article class="card" data-description="Grace meets craftsmanship in Kashish, a hand-embroidered ethnic kurti that celebrates Indian artistry. Its detailed needlework and rich hues bring sophistication to any occasion. Made from premium cotton for all-day comfort — Kashish is your go-to choice for elegant ethnic dressing." data-images="assets/kashish.jpg, assets/kashish.jpeg, assets/kashish-2.jpg">
-            <div class="card-media">
-              <img src="assets/kashish.jpg" alt="Kashish – Exquisite Hand-Embroidered Ethnic Kurti for Women | Sutraa" />
-              <div class="card-hover">
-                <button class="icon-btn" title="Quick view">Quick View</button>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Kashish – Exquisite Hand-Embroidered Ethnic Kurti for Women | Sutraa</h3>
-              <div class="card-meta">
-                <span class="price">Rs 350</span>
-                <a href="#" class="view-link">View Product</a>
-              </div>
-            </div>
-          </article>
-          <!-- Noor Flowing Cotton Kurtai Dress -->
-          <article class="card" data-description="Radiate grace with Noor, a flowing cotton kurta dress designed for comfort and beauty. Its lightweight fabric and fluid silhouette make it ideal for both daily wear and special occasions. Subtle details and soothing colors create an aura of effortless charm.">
-            <div class="card-media">
-              <img src="assets/noor.jpg" alt="Noor Flowing Cotton Kurtai Dress" />
-              <div class="card-hover">
-                <button class="icon-btn" title="Quick view">Quick View</button>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">Noor Flowing Cotton Kurtai Dress</h3>
-              <div class="card-meta">
-                <span class="price">Rs 300</span>
-                <a href="#" class="view-link">View Product</a>
-              </div>
-            </div>
-          </article>
-          <!-- Removed: Block-Print Tunic, Linen Palazzo Pants, Organic-Cotton Top -->
-
-          <article class="card" data-description="Discover Sutraa’s complete designer collection — featuring Rangrez, Tejshri, Siyara, Kashish, and Noor. Each piece is a blend of traditional artistry and modern design, handcrafted to reflect individuality and cultural elegance. Shop all five signature looks and express your unique Sutraa story.">
-            <div class="card-media">
-              <img src="The Sutraa Designer Collective.jpg" alt="Soft Draped Dress" />
-              <div class="card-hover">
-                <button class="icon-btn">Quick View</button>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3 class="card-title">The Sutraa Designer Collective – Shop All 5 Signature Brands in One Place</h3>
-              <div class="card-meta">
-                <span class="price">1499 rs </span>
-                <a href="#" class="view-link">View Product</a>
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
-      </section>
 
-      <section id="about" class="about container">
-        <div class="about-inner">
-          <h3>Crafting Comfort. Defining Style.</h3>
-          <p class="muted">SUTRAA blends natural fabrics with timeless silhouettes — pieces designed to travel with you through the seasons. Each garment is made with intention and care.</p>
+        <div class="review-card">
+          <div class="review-stars">★★★★☆</div>
+          <h4>"Great quality at this price!"</h4>
+          <p class="muted">I was sceptical ordering online but Sutraa delivered. The Rangrez pullover is unique — my daughter loved it too. Fast shipping!</p>
+          <div class="reviewer">
+            <img src="assets/avatar3.jpg" alt="Rashmi" class="reviewer-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>R</text></svg>'">
+            <div>
+              <strong>Rashmi K.</strong><br>
+              <span class="muted">Bangalore · Verified Buyer</span>
+            </div>
+          </div>
         </div>
-      </section>
-    </main>
 
-    <footer class="site-footer container">
-      <div>© <span id="year"></span> SUTRAA — All rights reserved.</div>
-      <div class="footer-links">Built with care • <a href="#">Privacy</a> • <a href="#">Terms</a></div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <h4>"Noor dress stole the show"</h4>
+          <p class="muted">Wore it to a wedding and everyone asked where I got it. Flowy, elegant, and so comfortable — I could dance all night!</p>
+          <div class="reviewer">
+            <img src="assets/avatar4.jpg" alt="Meera" class="reviewer-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>M</text></svg>'">
+            <div>
+              <strong>Meera P.</strong><br>
+              <span class="muted">Pune · Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ INFLUENCER / CREATOR REELS SECTION ═══════════ -->
+    <section id="influencers" class="creators-section container">
+      <div class="section-header">
+        <h2>Creator Reels & Collaborations</h2>
+        <p class="muted">See how our community styles SUTRAA — real moments, real style.</p>
+      </div>
+
+      <div class="creators-grid">
+        <!-- Creator 1 -->
+        <div class="creator-card">
+          <div class="creator-reel-placeholder">
+            <div class="reel-play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+            <img src="assets/creator1.jpg" alt="Creator reel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect width=%22400%22 height=%22500%22 fill=%22%23d9c9b7%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22%23bfa58a%22>Reel</text></svg>'">
+            <div class="reel-overlay">
+              <i class="fas fa-play-circle"></i>
+              <span>Watch Reel</span>
+            </div>
+          </div>
+          <div class="creator-info">
+            <div class="creator-avatar">
+              <img src="assets/avatar1.jpg" alt="Ananya" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>A</text></svg>'">
+            </div>
+            <div class="creator-details">
+              <h4>Ananya Verma</h4>
+              <span class="muted">@ananya_styles · 48K followers</span>
+              <div class="creator-stats">
+                <span>❤️ 2.3K likes</span>
+                <span>💬 89 comments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Creator 2 -->
+        <div class="creator-card">
+          <div class="creator-reel-placeholder">
+            <div class="reel-play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+            <img src="assets/creator2.jpg" alt="Creator reel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect width=%22400%22 height=%22500%22 fill=%22%23bfa58a%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22%23ffffff%22>Reel</text></svg>'">
+            <div class="reel-overlay">
+              <i class="fas fa-play-circle"></i>
+              <span>Watch Reel</span>
+            </div>
+          </div>
+          <div class="creator-info">
+            <div class="creator-avatar">
+              <img src="assets/avatar2.jpg" alt="Kavya" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>K</text></svg>'">
+            </div>
+            <div class="creator-details">
+              <h4>Kavya Nair</h4>
+              <span class="muted">@kavya_wears · 32K followers</span>
+              <div class="creator-stats">
+                <span>❤️ 1.8K likes</span>
+                <span>💬 56 comments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Creator 3 -->
+        <div class="creator-card">
+          <div class="creator-reel-placeholder">
+            <div class="reel-play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+            <img src="assets/creator3.jpg" alt="Creator reel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect width=%22400%22 height=%22500%22 fill=%22%23c99b6a%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22%23ffffff%22>Reel</text></svg>'">
+            <div class="reel-overlay">
+              <i class="fas fa-play-circle"></i>
+              <span>Watch Reel</span>
+            </div>
+          </div>
+          <div class="creator-info">
+            <div class="creator-avatar">
+              <img src="assets/avatar3.jpg" alt="Divya" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>D</text></svg>'">
+            </div>
+            <div class="creator-details">
+              <h4>Divya Rao</h4>
+              <span class="muted">@divya_ethnic · 67K followers</span>
+              <div class="creator-stats">
+                <span>❤️ 4.1K likes</span>
+                <span>💬 212 comments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Creator 4 -->
+        <div class="creator-card">
+          <div class="creator-reel-placeholder">
+            <div class="reel-play-icon">
+              <i class="fas fa-play"></i>
+            </div>
+            <img src="assets/creator4.jpg" alt="Creator reel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect width=%22400%22 height=%22500%22 fill=%22%23f6f2ed%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22%23bfa58a%22>Reel</text></svg>'">
+            <div class="reel-overlay">
+              <i class="fas fa-play-circle"></i>
+              <span>Watch Reel</span>
+            </div>
+          </div>
+          <div class="creator-info">
+            <div class="creator-avatar">
+              <img src="assets/avatar4.jpg" alt="Shreya" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>S</text></svg>'">
+            </div>
+            <div class="creator-details">
+              <h4>Shreya Kapoor</h4>
+              <span class="muted">@shreya_fashion · 29K followers</span>
+              <div class="creator-stats">
+                <span>❤️ 1.2K likes</span>
+                <span>💬 44 comments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="creators-cta">
+        <a href="https://www.instagram.com/sutraa.3?igsh=YzljYTk1ODg3Zg" target="_blank" class="btn btn-outline">
+          <i class="fab fa-instagram"></i> Follow More on Instagram
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════ SIZE GUIDE ═══════════ -->
+    <section id="size-guide" class="size-section container">
+      <div class="section-header">
+        <h2>Size Guide & Fit</h2>
+        <p class="muted">Find your perfect fit — all our pieces are available in S, M, L, XL.</p>
+      </div>
+      <div class="size-table-wrap">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Chest (inches)</th>
+              <th>Waist (inches)</th>
+              <th>Hip (inches)</th>
+              <th>Recommended For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="size-cell"><strong>S</strong></td>
+              <td>34–36</td>
+              <td>28–30</td>
+              <td>36–38</td>
+              <td>Petite / slim fit</td>
+            </tr>
+            <tr>
+              <td class="size-cell"><strong>M</strong></td>
+              <td>36–38</td>
+              <td>30–32</td>
+              <td>38–40</td>
+              <td>Regular fit</td>
+            </tr>
+            <tr>
+              <td class="size-cell"><strong>L</strong></td>
+              <td>38–40</td>
+              <td>32–34</td>
+              <td>40–42</td>
+              <td>Curvy / relaxed fit</td>
+            </tr>
+            <tr>
+              <td class="size-cell"><strong>XL</strong></td>
+              <td>40–42</td>
+              <td>34–36</td>
+              <td>42–44</td>
+              <td>Plus / loose fit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="size-tips">
+        <i class="fas fa-ruler"></i>
+        <div><strong>Not sure?</strong> Reach out to us on WhatsApp — we'll help you pick the perfect size. Or check our product pages for model measurements and fit notes.</div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ABOUT / BRAND STORY ═══════════ -->
+    <section id="about" class="about-section container">
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <img src="assets/hero.jpg" alt="Sutraa craft" />
+          <div class="about-image-caption">
+            <span>Handcrafted with love in India</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="about-label">Our Story</span>
+          <h2>SUTRAA</h2>
+          <p class="about-tag">Effortless Styles for Your Story</p>
+          <p>SUTRAA was born from a simple belief: that what you wear should feel as good as it looks. We source the finest cottons, collaborate with skilled artisans, and handcraft each piece — from tie-dye to block-print to embroidery — with patience and pride.</p>
+          <p>Our name, <em>Sutraa</em>, means a thread that binds — connecting heritage craft to modern living, the artisan to the wearer, and every garment to your personal story.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <i class="fas fa-leaf"></i>
+              <span>Natural, breathable fabrics</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-hands"></i>
+              <span>Artisan-crafted, no mass production</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-gem"></i>
+              <span>Timeless silhouettes, wearable art</span>
+            </div>
+          </div>
+          <a href="#new-arrivals" class="btn btn-primary">Shop the Story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="site-footer">
+      <div class="footer-grid container">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="SUTRAA" class="footer-logo">
+          <p class="muted">Effortless Styles for Your Story. Handcrafted. Cotton. Timeless.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/sutraa.3?igsh=YzljYTk1ODg3Zg" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/c/917208815471" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/16goFgjJVC/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#new-arrivals">New Arrivals</a></li>
+            <li><a href="#tops">Tops</a></li>
+            <li><a href="#bottoms">Bottoms</a></li>
+            <li><a href="#dresses">Dresses</a></li>
+            <li><a href="#influencers">Creator Reels</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#size-guide">Size Guide</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="https://wa.me/c/917208815471">Contact via WhatsApp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Trust</h4>
+          <ul>
+            <li><a href="#">Secure Payments</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#reviews">Customer Reviews</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fas fa-mobile"></i> UPI
+          <i class="fab fa-google-pay"></i>
+        </div>
+        <div>© <span id="year"></span> SUTRAA — All rights reserved. Made with ♥ in India.</div>
+      </div>
     </footer>
 
-    <!-- Quick View Modal -->
+    <!-- ═══════════ CART SIDEBAR ═══════════ -->
+    <div id="cartSidebar" class="cart-sidebar" role="dialog" aria-hidden="true">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="cart-close" aria-label="Close cart">&times;</button>
+      </div>
+      <div class="cart-body" id="cartBody">
+        <p class="cart-empty">Your cart is empty. Start exploring our collection!</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <span class="total-price" id="cartTotal">₹0</span>
+        </div>
+        <a href="https://wa.me/c/917208815471" class="btn btn-primary cart-checkout" target="_blank">
+          <i class="fab fa-whatsapp"></i> Order via WhatsApp
+        </a>
+      </div>
+    </div>
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- ═══════════ QUICK VIEW MODAL ═══════════ -->
     <div id="quickview" class="quickview-modal" role="dialog" aria-hidden="true">
       <div class="quickview-content" role="document">
-        <button class="quickview-close" aria-label="Close">×</button>
+        <button class="quickview-close" aria-label="Close">&times;</button>
         <div class="quickview-img">
           <div class="quickview-slider">
-            <button class="qv-nav qv-prev" aria-label="Previous image">‹</button>
+            <button class="qv-nav qv-prev" aria-label="Previous image">&lsaquo;</button>
             <img src="" alt="" />
-            <button class="qv-nav qv-next" aria-label="Next image">›</button>
+            <button class="qv-nav qv-next" aria-label="Next image">&rsaquo;</button>
           </div>
         </div>
         <div class="quickview-meta">
-            <h3></h3>
-            <p class="quickview-desc muted"></p>
-            <div class="sizes">
-              <div class="size-label">Available sizes:</div>
-              <div class="size-options" role="list">
-                <!-- size buttons will be rendered here -->
-              </div>
-            </div>
-            <div class="price"></div>
-          <div style="margin-top:18px;display:flex;gap:12px;align-items:center;">
+          <h3></h3>
+          <div class="quickview-price"></div>
+          <div class="quickview-delivery">
+            <i class="fas fa-truck-fast"></i> Free shipping on orders above ₹499
+          </div>
+          <p class="quickview-desc muted"></p>
+          <div class="qv-sizes">
+            <div class="size-label">Available sizes:</div>
+            <div class="size-options" role="list"></div>
+          </div>
+          <div class="qv-fabric">
+            <i class="fas fa-shirt"></i>
+            <span>100% Cotton · Handcrafted · Low-impact dyes</span>
+          </div>
+          <div class="qv-actions">
             <button class="btn btn-primary">Add to Cart</button>
-              <a href="https://wa.me/c/917208815471" target="_blank" class="whatsapp-btn">
-    <i class="fab fa-whatsapp"></i> WhatsApp
-  </a>
+            <a href="https://wa.me/c/917208815471" target="_blank" class="whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <button class="icon-btn-wishlist" id="qvWishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
           </div>
         </div>
       </div>
     </div>
-      
-      <div class="contact-box">
-    <h2>Contact Us</h2>
-    <div class="social-links">
-      <a href="https://www.instagram.com/sutraa.3?igsh=YzljYTk1ODg3Zg" target="_blank" class="instagram" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/c/917208815471" target="_blank" class="whatsapp" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://www.facebook.com/share/16goFgjJVC/" target="_blank" class="facebook" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-    </div>
-    <p class="footer-note">We’d love to hear from you 💬</p>
-  </div>
-       
-    <script>
-      // set year
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-    <script>
-      // Quick view modal behavior
-      (function(){
-        function qs(sel, ctx){ return (ctx||document).querySelector(sel); }
-        function qsa(sel, ctx){ return Array.from((ctx||document).querySelectorAll(sel)); }
-        var modal = qs('#quickview');
-  var modalImg = qs('.quickview-img img', modal);
-  var modalTitle = qs('.quickview-meta h3', modal);
-  var modalPrice = qs('.quickview-meta .price', modal);
-  var modalDesc = qs('.quickview-desc', modal);
-  var modalSizes = qs('.size-options', modal);
 
-        function openCardInModal(card){
-          if(!card) return;
-          var img = card.querySelector('.card-media img');
-          var title = card.querySelector('.card-title')?.textContent || '';
-          var price = card.querySelector('.price')?.textContent || '';
-          var sizesRaw = card.dataset.sizes || '';
-          var sizesArr = sizesRaw ? sizesRaw.split(',').map(function(s){ return s.trim(); }).filter(Boolean) : ['S','M','L','XL'];
+  </main>
 
-          // images: either from data-images (comma separated) or fallback to card image
-          var imagesRaw = card.dataset.images || '';
-          var candidateImages = imagesRaw ? imagesRaw.split(',').map(function(s){ return s.trim(); }).filter(Boolean) : (img ? [ img.src ] : []);
+  <!-- ═══════════ SCrolled-to-top button ═══════════ -->
+  <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-          // preload candidate images and filter out any that fail to load (prevents broken images)
-          function preloadAndFilter(urls, cb){
-            if(!urls || urls.length === 0) return cb([]);
-            var loaded = [];
-            var checked = 0;
-            urls.forEach(function(u){
-              var test = new Image();
-              test.onload = function(){ loaded.push(u); checked++; if(checked === urls.length) cb(loaded); };
-              test.onerror = function(){ checked++; if(checked === urls.length) cb(loaded); };
-              // cache-bust slightly to avoid stale 404 caches in dev: only when url looks local
-              test.src = u;
-            });
-          }
+  <script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-          preloadAndFilter(candidateImages, function(images){
-            // fallback: if nothing loaded, try card image (if different) or leave empty
-            if(images.length === 0 && img && img.src){ images = [ img.src ]; }
+  // ── Cart logic ──
+  const cart = [];
+  const cartCount = document.getElementById('cartCount');
+  const cartBody = document.getElementById('cartBody');
+  const cartTotal = document.getElementById('cartTotal');
+  const cartSidebar = document.getElementById('cartSidebar');
+  const cartOverlay = document.getElementById('cartOverlay');
 
-            // set initial image and index
-            modalImg.src = images[0] || '';
-            modalImg.alt = title;
-            modalImg.dataset.index = '0';
+  function updateCart() {
+    cartCount.textContent = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
+    const total = cart.reduce((sum, item) => sum + (parseInt(item.price.replace(/[^0-9]/g, '')) || 0) * (item.qty || 1), 0);
+    cartTotal.textContent = '₹' + total;
+    if (cart.length === 0) {
+      cartBody.innerHTML = '<p class="cart-empty">Your cart is empty. Start exploring our collection!</p>';
+    } else {
+      cartBody.innerHTML = cart.map((item, i) => `
+        <div class="cart-item">
+          <img src="${item.img}" alt="${item.title}" class="cart-item-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><rect width=%2280%22 height=%2280%22 fill=%22%23d9c9b7%22/></svg>'">
+          <div class="cart-item-info">
+            <strong>${item.title}</strong>
+            <div class="cart-item-price">₹${item.price.replace(/[^0-9]/g, '')}</div>
+            <div class="cart-item-qty">Qty: ${item.qty || 1}</div>
+          </div>
+          <button class="cart-item-remove" data-index="${i}" aria-label="Remove item">&times;</button>
+        </div>
+      `).join('');
+      cartBody.querySelectorAll('.cart-item-remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          cart.splice(parseInt(btn.dataset.index), 1);
+          updateCart();
+        });
+      });
+    }
+  }
 
-            // wire up slider nav (if present in modal)
-            var sliderPrev = qs('.qv-prev', modal);
-            var sliderNext = qs('.qv-next', modal);
-            if(sliderPrev && sliderNext){
-              var showNav = images.length > 1;
-              sliderPrev.style.display = showNav ? 'block' : 'none';
-              sliderNext.style.display = showNav ? 'block' : 'none';
-              // assign handlers (overwrite any previous handlers)
-              sliderPrev.onclick = function(){
-                var idx = parseInt(modalImg.dataset.index || '0', 10);
-                idx = (idx - 1 + images.length) % images.length;
-                modalImg.dataset.index = String(idx);
-                modalImg.src = images[idx];
-              };
-              sliderNext.onclick = function(){
-                var idx = parseInt(modalImg.dataset.index || '0', 10);
-                idx = (idx + 1) % images.length;
-                modalImg.dataset.index = String(idx);
-                modalImg.src = images[idx];
-              };
-            }
+  document.getElementById('cartToggle').addEventListener('click', () => {
+    cartSidebar.classList.add('open');
+    cartOverlay.classList.add('open');
+    cartSidebar.setAttribute('aria-hidden', 'false');
+  });
 
-            modalTitle.textContent = title;
-            modalDesc.textContent = card.dataset.description || '';
+  function closeCart() {
+    cartSidebar.classList.remove('open');
+    cartOverlay.classList.remove('open');
+    cartSidebar.setAttribute('aria-hidden', 'true');
+  }
 
-            // render size buttons
-            modalSizes.innerHTML = '';
-            sizesArr.forEach(function(sz, idx){
-              var btn = document.createElement('button');
-              btn.type = 'button';
-              btn.className = 'size-btn';
-              btn.textContent = sz;
-              btn.setAttribute('role','button');
-              btn.setAttribute('aria-checked', idx === 0 ? 'true' : 'false');
-              if(idx === 0){ btn.classList.add('active'); }
-              btn.addEventListener('click', function(){
-                modal.querySelectorAll('.size-btn').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-checked','false'); });
-                btn.classList.add('active');
-                btn.setAttribute('aria-checked','true');
-              });
-              modalSizes.appendChild(btn);
-            });
+  document.querySelector('.cart-close').addEventListener('click', closeCart);
+  cartOverlay.addEventListener('click', closeCart);
 
-            modalPrice.textContent = price;
-            modal.classList.add('open');
-            modal.setAttribute('aria-hidden','false');
-          });
+  // Product card "Add to Cart" via delegation
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.quickview-add-cart, .quickview-meta .btn-primary');
+    if (btn && btn.closest('.quickview-modal') && btn.dataset.product) {
+      const p = JSON.parse(btn.dataset.product);
+      cart.push(p);
+      updateCart();
+      btn.textContent = '✓ Added!';
+      setTimeout(() => { btn.textContent = 'Add to Cart'; }, 1500);
+      closeCart();
+    }
+  });
+
+  // ── Quick View Modal ──
+  (function() {
+    const modal = document.getElementById('quickview');
+    const modalImg = modal.querySelector('.quickview-img img');
+    const modalTitle = modal.querySelector('.quickview-meta h3');
+    const modalPrice = modal.querySelector('.quickview-price');
+    const modalDesc = modal.querySelector('.quickview-desc');
+    const modalSizes = modal.querySelector('.size-options');
+    const modalFabric = modal.querySelector('.qv-fabric');
+    const qvWishlist = document.getElementById('qvWishlist');
+
+    function openCardInModal(card) {
+      if (!card) return;
+      const img = card.querySelector('.card-media img');
+      const title = card.querySelector('.card-title')?.textContent || '';
+      const price = card.querySelector('.price')?.textContent || '';
+      const cat = card.querySelector('.card-category')?.textContent || '';
+      const desc = card.dataset.description || '';
+      const sizesArr = ['S', 'M', 'L', 'XL'];
+
+      const imagesRaw = card.dataset.images || '';
+      let candidateImages = imagesRaw ? imagesRaw.split(',').map(s => s.trim()).filter(Boolean) : (img ? [img.src] : []);
+      candidateImages = candidateImages.filter(u => u.includes('://') || u.startsWith('/'));
+      if (candidateImages.length === 0 && img && img.src) candidateImages = [img.src];
+
+      function preloadAndFilter(urls, cb) {
+        if (!urls.length) return cb([]);
+        const loaded = [], checked = 0;
+        urls.forEach(u => {
+          const test = new Image();
+          test.onload = () => { loaded.push(u); check(); };
+          test.onerror = () => { check(); };
+          test.src = u;
+          function check() { if (++checked === urls.length) cb(loaded); }
+        });
+      }
+
+      preloadAndFilter(candidateImages, (images) => {
+        if (images.length === 0 && img && img.src) images = [img.src];
+        modalImg.src = images[0] || '';
+        modalImg.alt = title;
+        modalImg.dataset.index = '0';
+
+        const showNav = images.length > 1;
+        const prev = modal.querySelector('.qv-prev');
+        const next = modal.querySelector('.qv-next');
+        prev.style.display = showNav ? 'flex' : 'none';
+        next.style.display = showNav ? 'flex' : 'none';
+        if (showNav) {
+          prev.onclick = () => {
+            const idx = (parseInt(modalImg.dataset.index || '0', 10) - 1 + images.length) % images.length;
+            modalImg.dataset.index = String(idx);
+            modalImg.src = images[idx];
+          };
+          next.onclick = () => {
+            const idx = (parseInt(modalImg.dataset.index || '0', 10) + 1) % images.length;
+            modalImg.dataset.index = String(idx);
+            modalImg.src = images[idx];
+          };
         }
 
-        qsa('.icon-btn').forEach(function(btn){
-          btn.addEventListener('click', function(e){
-            e.preventDefault();
-            var card = btn.closest('.card');
-            openCardInModal(card);
-          })
+        modalTitle.textContent = title;
+        modalPrice.textContent = price;
+        modalDesc.textContent = desc;
+        modalFabric.innerHTML = '<i class="fas fa-shirt"></i> <span>100% Cotton · Handcrafted · Low-impact dyes</span>';
+
+        modalSizes.innerHTML = '';
+        sizesArr.forEach((sz, idx) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'size-btn' + (idx === 0 ? ' active' : '');
+          btn.textContent = sz;
+          btn.setAttribute('aria-checked', idx === 0 ? 'true' : 'false');
+          btn.addEventListener('click', () => {
+            modalSizes.querySelectorAll('.size-btn').forEach(b => {
+              b.classList.remove('active');
+              b.setAttribute('aria-checked', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-checked', 'true');
+          });
+          modalSizes.appendChild(btn);
         });
 
-        qsa('.view-link').forEach(function(link){
-          link.addEventListener('click', function(e){
-            e.preventDefault();
-            var card = link.closest('.card');
-            openCardInModal(card);
-          })
+        // Add to cart button with product data
+        const addBtn = modal.querySelector('.quickview-meta .btn-primary');
+        addBtn.dataset.product = JSON.stringify({
+          title: title,
+          price: price,
+          img: images[0] || '',
+          qty: 1
         });
+        addBtn.textContent = 'Add to Cart';
 
-        // close modal when clicking overlay or close button
-        modal.addEventListener('click', function(e){
-          if(e.target === modal || e.target.classList.contains('quickview-close')){
-            modal.classList.remove('open');
-            modal.setAttribute('aria-hidden','true');
-          }
-        });
+        // Wishlist toggle
+        qvWishlist.onclick = () => {
+          qvWishlist.querySelector('i').classList.toggle('far');
+          qvWishlist.querySelector('i').classList.toggle('fas');
+          qvWishlist.querySelector('i').classList.toggle('far');
+          qvWishlist.classList.toggle('active');
+        };
 
-        // close with ESC
-        document.addEventListener('keydown', function(e){
-          if(e.key === 'Escape'){
-            modal.classList.remove('open');
-            modal.setAttribute('aria-hidden','true');
-          }
-        });
-      })();
-    </script>
-  </body>
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
 
+    document.querySelectorAll('[data-quickview="true"]').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const card = el.closest('.card') || el.closest('.creator-card') || null;
+        if (card) openCardInModal(card);
+      });
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.classList.contains('quickview-close')) {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+        if (cartSidebar.classList.contains('open')) closeCart();
+      }
+    });
+  })();
+
+  // ── Scroll to top ──
+  const scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollTopBtn.style.opacity = window.scrollY > 400 ? 1 : 0;
+  });
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── Category tabs ──
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const category = tab.dataset.tab;
+      document.querySelectorAll('.card').forEach(card => {
+        if (category === 'all') {
+          card.style.display = '';
+        } else {
+          const cats = card.dataset.category || '';
+          card.style.display = cats.includes(category) ? '' : 'none';
+        }
+      });
+    });
+  });
+
+  // ── Wishlist toggle on cards ──
+  document.querySelectorAll('.icon-btn-wishlist').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const icon = btn.querySelector('i');
+      icon.classList.toggle('far');
+      icon.classList.toggle('fas');
+      btn.classList.toggle('active');
+    });
+  });
+  </script>
+</body>
 </html>
-
