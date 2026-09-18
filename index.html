@@ -49,9 +49,37 @@
           <i class="fas fa-shopping-bag"></i>
           <span class="cart-count" id="cartCount">0</span>
         </button>
+        <button class="nav-mobile-toggle" id="mobileNavToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </nav>
   </header>
+
+  <!-- ═══════════ MOBILE NAV OVERLAY ═══════════ -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-panel">
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#new-arrivals" class="mobile-nav-link">New Arrivals</a></li>
+        <li><a href="#tops" class="mobile-nav-link">Tops</a></li>
+        <li><a href="#bottoms" class="mobile-nav-link">Bottoms</a></li>
+        <li><a href="#dresses" class="mobile-nav-link">Dresses</a></li>
+        <li><a href="#influencers" class="mobile-nav-link">Creator Reels</a></li>
+        <li><a href="#reviews" class="mobile-nav-link">Reviews</a></li>
+        <li style="border-top: 1px solid var(--border); margin-top: 12px; padding-top: 12px;">
+          <a href="https://wa.me/c/917208815471" class="mobile-nav-link" target="_blank">
+            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+          </a>
+        </li>
+        <li style="border-top: 1px solid var(--border); margin-top: 8px; padding-top: 12px;">
+          <a href="#size-guide" class="mobile-nav-link">Size Guide</a>
+        </li>
+        <li><a href="#about" class="mobile-nav-link">Our Story</a></li>
+      </ul>
+    </div>
+  </div>
 
   <main>
 
@@ -77,7 +105,7 @@
       </div>
     </section>
 
-    <!-- ═══════════ SOCIAL PROOF BAR (Instagram followers + ratings) ═══════════ -->
+    <!-- ═══════════ SOCIAL PROOF BAR ═══════════ -->
     <section class="social-proof-bar">
       <div class="container proof-inner">
         <div class="proof-item">
@@ -128,11 +156,8 @@
         <!-- Rangrez -->
         <article class="card" data-category="tops ethnic" data-description="Step into colour with Rangrez — a beautifully crafted tie-dye pullover that captures the spirit of effortless fashion. Made from soft, breathable cotton, each piece is hand-dyed, making every Rangrez unique. Perfect for casual outings, brunches, or festive gatherings." data-price="300">
           <div class="card-media">
-            <img src="assets/rangrez.jpg" alt="Rangrez Tie-Dye Pullover" />
+            <img src="assets/rangrez.jpg" alt="Rangrez Tie-Dye Pullover" loading="lazy" />
             <div class="card-badge new">NEW</div>
-            <div class="card-hover">
-              <button class="icon-btn" data-quickview="true">Quick View</button>
-            </div>
           </div>
           <div class="card-body">
             <div class="card-category">Tops • Tie-Dye</div>
@@ -140,8 +165,8 @@
             <div class="card-meta">
               <span class="price">₹300</span>
               <div class="card-actions">
-                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                <a href="#" class="view-link" data-quickview="true">View Details</a>
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist" data-wishlist="true"><i class="far fa-heart"></i></button>
+                <button class="icon-btn" data-quickview="true">Quick View</button>
               </div>
             </div>
           </div>
@@ -150,11 +175,8 @@
         <!-- Tejshri -->
         <article class="card" data-category="tops ethnic" data-description="Add a touch of heritage to your everyday wardrobe with Tejshri — a stunning hand-block printed cotton tunic top. Designed with delicate straps and intricate Indian block patterns, it blends modern comfort with traditional charm. Lightweight, breezy, and elegant." data-price="300">
           <div class="card-media">
-            <img src="assets/tejshri.jpg" alt="Tejshri Hand-Block Print Cotton Strappy Tunic Top" />
+            <img src="assets/tejshri.jpg" alt="Tejshri Hand-Block Print Cotton Strappy Tunic Top" loading="lazy" />
             <div class="card-badge new">NEW</div>
-            <div class="card-hover">
-              <button class="icon-btn" data-quickview="true">Quick View</button>
-            </div>
           </div>
           <div class="card-body">
             <div class="card-category">Tops • Block Print</div>
@@ -162,8 +184,8 @@
             <div class="card-meta">
               <span class="price">₹300</span>
               <div class="card-actions">
-                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                <a href="#" class="view-link" data-quickview="true">View Details</a>
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist" data-wishlist="true"><i class="far fa-heart"></i></button>
+                <button class="icon-btn" data-quickview="true">Quick View</button>
               </div>
             </div>
           </div>
@@ -172,11 +194,8 @@
         <!-- Siyara -->
         <article class="card" data-category="tops ethnic" data-description="Siyara reflects timeless elegance and artisanal craftsmanship. This handcrafted ethnic top is designed for the modern woman who values tradition and style. With detailed embroidery and soft, flowy fabric, it is perfect for festive occasions, family gatherings, or chic casual wear." data-price="300">
           <div class="card-media">
-            <img src="assets/siyara.jpg" alt="Siyara – Elegant Handcrafted Ethnic Top for Women | Sutraa" />
-            <div class="card-badge soldout">BESTSELLER</div>
-            <div class="card-hover">
-              <button class="icon-btn" data-quickview="true">Quick View</button>
-            </div>
+            <img src="assets/siyara.jpg" alt="Siyara – Elegant Handcrafted Ethnic Top for Women | Sutraa" loading="lazy" />
+            <div class="card-badge bestseller">BESTSELLER</div>
           </div>
           <div class="card-body">
             <div class="card-category">Tops • Embroidered</div>
@@ -184,21 +203,18 @@
             <div class="card-meta">
               <span class="price">₹300</span>
               <div class="card-actions">
-                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                <a href="#" class="view-link" data-quickview="true">View Details</a>
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist" data-wishlist="true"><i class="far fa-heart"></i></button>
+                <button class="icon-btn" data-quickview="true">Quick View</button>
               </div>
             </div>
           </div>
         </article>
 
         <!-- Kashish -->
-        <article class="card" data-category="tops ethnic" data-description="Grace meets craftsmanship in Kashish, a hand-embroidered ethnic kurti that celebrates Indian artistry. Its detailed needlework and rich hues bring sophistication to any occasion. Made from premium cotton for all-day comfort." data-price="350" data-images="assets/kashish.jpg, assets/kashish.jpeg">
+        <article class="card" data-category="tops ethnic" data-description="Grace meets craftsmanship in Kashish, a hand-embroidered ethnic kurti that celebrates Indian artistry. Its detailed needlework and rich hues bring sophistication to any occasion. Made from premium cotton for all-day comfort." data-price="350" data-images="assets/kashish.jpg,assets/kashish.jpeg">
           <div class="card-media">
-            <img src="assets/kashish.jpg" alt="Kashish – Exquisite Hand-Embroidered Ethnic Kurti for Women | Sutraa" />
+            <img src="assets/kashish.jpg" alt="Kashish – Exquisite Hand-Embroidered Ethnic Kurti for Women | Sutraa" loading="lazy" />
             <div class="card-badge new">NEW</div>
-            <div class="card-hover">
-              <button class="icon-btn" data-quickview="true">Quick View</button>
-            </div>
           </div>
           <div class="card-body">
             <div class="card-category">Kurti • Hand-Embroidered</div>
@@ -206,8 +222,8 @@
             <div class="card-meta">
               <span class="price">₹350</span>
               <div class="card-actions">
-                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                <a href="#" class="view-link" data-quickview="true">View Details</a>
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist" data-wishlist="true"><i class="far fa-heart"></i></button>
+                <button class="icon-btn" data-quickview="true">Quick View</button>
               </div>
             </div>
           </div>
@@ -216,11 +232,8 @@
         <!-- Noor -->
         <article class="card" data-category="dresses ethnic" data-description="Radiate grace with Noor, a flowing cotton kurta dress designed for comfort and beauty. Its lightweight fabric and fluid silhouette make it ideal for both daily wear and special occasions. Subtle details and soothing colours create an aura of effortless charm." data-price="300">
           <div class="card-media">
-            <img src="assets/noor.jpg" alt="Noor Flowing Cotton Kurtai Dress" />
-            <div class="card-badge soldout">POPULAR</div>
-            <div class="card-hover">
-              <button class="icon-btn" data-quickview="true">Quick View</button>
-            </div>
+            <img src="assets/noor.jpg" alt="Noor Flowing Cotton Kurtai Dress" loading="lazy" />
+            <div class="card-badge popular">POPULAR</div>
           </div>
           <div class="card-body">
             <div class="card-category">Dress • Cotton Kurta</div>
@@ -228,8 +241,8 @@
             <div class="card-meta">
               <span class="price">₹300</span>
               <div class="card-actions">
-                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                <a href="#" class="view-link" data-quickview="true">View Details</a>
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist" data-wishlist="true"><i class="far fa-heart"></i></button>
+                <button class="icon-btn" data-quickview="true">Quick View</button>
               </div>
             </div>
           </div>
@@ -238,11 +251,8 @@
         <!-- The Sutraa Designer Collective -->
         <article class="card" data-category="dresses ethnic" data-description="Discover Sutraa's complete designer collection — featuring Rangrez, Tejshri, Siyara, Kashish, and Noor. Each piece is a blend of traditional artistry and modern design, handcrafted to reflect individuality and cultural elegance. Shop all five signature looks and express your unique Sutraa story." data-price="1499" data-images="assets/collective.jpg">
           <div class="card-media">
-            <img src="assets/collective.jpg" alt="The Sutraa Designer Collective – Shop All 5 Signature Brands in One Place" />
+            <img src="assets/collective.jpg" alt="The Sutraa Designer Collective – Shop All 5 Signature Brands in One Place" loading="lazy" />
             <div class="card-badge bundle">BUNDLE</div>
-            <div class="card-hover">
-              <button class="icon-btn" data-quickview="true">Quick View</button>
-            </div>
           </div>
           <div class="card-body">
             <div class="card-category">Collection • 5-Piece Bundle</div>
@@ -250,8 +260,8 @@
             <div class="card-meta">
               <span class="price">₹1,499</span>
               <div class="card-actions">
-                <button class="icon-btn-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
-                <a href="#" class="view-link" data-quickview="true">View Details</a>
+                <button class="icon-btn-wishlist" aria-label="Add to wishlist" data-wishlist="true"><i class="far fa-heart"></i></button>
+                <button class="icon-btn" data-quickview="true">Quick View</button>
               </div>
             </div>
           </div>
@@ -314,7 +324,7 @@
       </div>
       <div class="editorial-right">
         <div class="editorial-img-wrap">
-          <img src="assets/collective.jpg" alt="Sutraa collection" />
+          <img src="assets/collective.jpg" alt="Sutraa collection" loading="lazy" />
         </div>
       </div>
     </section>
@@ -326,8 +336,8 @@
           <h3>Join the SUTRAA Circle</h3>
           <p>Be the first to know about new drops, artisan stories, and exclusive offers.</p>
           <div class="subscribe-form">
-            <input type="email" placeholder="Enter your email" class="subscribe-input" />
-            <button class="btn btn-primary subscribe-btn">Subscribe</button>
+            <input type="email" placeholder="Enter your email" class="subscribe-input" id="subscribeEmail" />
+            <button class="btn btn-primary subscribe-btn" id="subscribeBtn">Subscribe</button>
           </div>
           <p class="muted subscribe-note">No spam. Unsubscribe anytime.</p>
         </div>
@@ -346,46 +356,43 @@
           <h4>"Absolutely love the Tejshri top!"</h4>
           <p class="muted">The hand-block print is even more beautiful in person. Got compliments at every event. Fabric is so soft and comfortable.</p>
           <div class="reviewer">
-            <img src="assets/avatar1.jpg" alt="Priya" class="reviewer-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>P</text></svg>'">
+            <div class="reviewer-avatar">P</div>
             <div>
               <strong>Priya S.</strong><br>
               <span class="muted">Mumbai · Verified Buyer</span>
             </div>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <h4>"Kashish kurti — my new favourite!"</h4>
           <p class="muted">The embroidery is so detailed. Fits perfectly and the cotton is lightweight yet opaque. Will definitely order more colours.</p>
           <div class="reviewer">
-            <img src="assets/avatar2.jpg" alt="Anjali" class="reviewer-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>A</text></svg>'">
+            <div class="reviewer-avatar">A</div>
             <div>
               <strong>Anjali M.</strong><br>
               <span class="muted">Delhi · Verified Buyer</span>
             </div>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★☆</div>
           <h4>"Great quality at this price!"</h4>
           <p class="muted">I was sceptical ordering online but Sutraa delivered. The Rangrez pullover is unique — my daughter loved it too. Fast shipping!</p>
           <div class="reviewer">
-            <img src="assets/avatar3.jpg" alt="Rashmi" class="reviewer-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>R</text></svg>'">
+            <div class="reviewer-avatar">R</div>
             <div>
               <strong>Rashmi K.</strong><br>
               <span class="muted">Bangalore · Verified Buyer</span>
             </div>
           </div>
         </div>
-
         <div class="review-card">
           <div class="review-stars">★★★★★</div>
           <h4>"Noor dress stole the show"</h4>
           <p class="muted">Wore it to a wedding and everyone asked where I got it. Flowy, elegant, and so comfortable — I could dance all night!</p>
           <div class="reviewer">
-            <img src="assets/avatar4.jpg" alt="Meera" class="reviewer-avatar" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>M</text></svg>'">
+            <div class="reviewer-avatar">M</div>
             <div>
               <strong>Meera P.</strong><br>
               <span class="muted">Pune · Verified Buyer</span>
@@ -403,13 +410,10 @@
       </div>
 
       <div class="creators-grid">
-        <!-- Creator 1 -->
         <div class="creator-card">
           <div class="creator-reel-placeholder">
-            <div class="reel-play-icon">
-              <i class="fas fa-play"></i>
-            </div>
-            <img src="assets/creator1.jpg" alt="Creator reel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect width=%22400%22 height=%22500%22 fill=%22%23d9c9b7%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22%23bfa58a%22>Reel</text></svg>'">
+            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+            <img src="assets/creator1.jpg" alt="Ananya Verma creator reel" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')" loading="lazy" />
             <div class="reel-overlay">
               <i class="fas fa-play-circle"></i>
               <span>Watch Reel</span>
@@ -417,7 +421,7 @@
           </div>
           <div class="creator-info">
             <div class="creator-avatar">
-              <img src="assets/avatar1.jpg" alt="Ananya" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>A</text></svg>'">
+              <div class="creator-avatar-initial">A</div>
             </div>
             <div class="creator-details">
               <h4>Ananya Verma</h4>
@@ -430,13 +434,10 @@
           </div>
         </div>
 
-        <!-- Creator 2 -->
         <div class="creator-card">
           <div class="creator-reel-placeholder">
-            <div class="reel-play-icon">
-              <i class="fas fa-play"></i>
-            </div>
-            <img src="assets/creator2.jpg" alt="Creator reel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect width=%22400%22 height=%22500%22 fill=%22%23bfa58a%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22%23ffffff%22>Reel</text></svg>'">
+            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+            <img src="assets/creator2.jpg" alt="Kavya Nair creator reel" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')" loading="lazy" />
             <div class="reel-overlay">
               <i class="fas fa-play-circle"></i>
               <span>Watch Reel</span>
@@ -444,7 +445,7 @@
           </div>
           <div class="creator-info">
             <div class="creator-avatar">
-              <img src="assets/avatar2.jpg" alt="Kavya" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>K</text></svg>'">
+              <div class="creator-avatar-initial">K</div>
             </div>
             <div class="creator-details">
               <h4>Kavya Nair</h4>
@@ -457,13 +458,10 @@
           </div>
         </div>
 
-        <!-- Creator 3 -->
         <div class="creator-card">
           <div class="creator-reel-placeholder">
-            <div class="reel-play-icon">
-              <i class="fas fa-play"></i>
-            </div>
-            <img src="assets/creator3.jpg" alt="Creator reel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect width=%22400%22 height=%22500%22 fill=%22%23c99b6a%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22%23ffffff%22>Reel</text></svg>'">
+            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+            <img src="assets/creator3.jpg" alt="Divya Rao creator reel" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')" loading="lazy" />
             <div class="reel-overlay">
               <i class="fas fa-play-circle"></i>
               <span>Watch Reel</span>
@@ -471,7 +469,7 @@
           </div>
           <div class="creator-info">
             <div class="creator-avatar">
-              <img src="assets/avatar3.jpg" alt="Divya" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>D</text></svg>'">
+              <div class="creator-avatar-initial">D</div>
             </div>
             <div class="creator-details">
               <h4>Divya Rao</h4>
@@ -484,13 +482,10 @@
           </div>
         </div>
 
-        <!-- Creator 4 -->
         <div class="creator-card">
           <div class="creator-reel-placeholder">
-            <div class="reel-play-icon">
-              <i class="fas fa-play"></i>
-            </div>
-            <img src="assets/creator4.jpg" alt="Creator reel" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22><rect width=%22400%22 height=%22500%22 fill=%22%23f6f2ed%22/><text x=%22200%22 y=%22250%22 text-anchor=%22middle%22 font-size=%2224%22 fill=%22%23bfa58a%22>Reel</text></svg>'">
+            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+            <img src="assets/creator4.jpg" alt="Shreya Kapoor creator reel" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')" loading="lazy" />
             <div class="reel-overlay">
               <i class="fas fa-play-circle"></i>
               <span>Watch Reel</span>
@@ -498,7 +493,7 @@
           </div>
           <div class="creator-info">
             <div class="creator-avatar">
-              <img src="assets/avatar4.jpg" alt="Shreya" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23d9c9b7%22/><text x=%2250%22 y=%2262%22 text-anchor=%22middle%22 font-size=%2240%22 fill=%22%23bfa58a%22>S</text></svg>'">
+              <div class="creator-avatar-initial">S</div>
             </div>
             <div class="creator-details">
               <h4>Shreya Kapoor</h4>
@@ -537,34 +532,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="size-cell"><strong>S</strong></td>
-              <td>34–36</td>
-              <td>28–30</td>
-              <td>36–38</td>
-              <td>Petite / slim fit</td>
-            </tr>
-            <tr>
-              <td class="size-cell"><strong>M</strong></td>
-              <td>36–38</td>
-              <td>30–32</td>
-              <td>38–40</td>
-              <td>Regular fit</td>
-            </tr>
-            <tr>
-              <td class="size-cell"><strong>L</strong></td>
-              <td>38–40</td>
-              <td>32–34</td>
-              <td>40–42</td>
-              <td>Curvy / relaxed fit</td>
-            </tr>
-            <tr>
-              <td class="size-cell"><strong>XL</strong></td>
-              <td>40–42</td>
-              <td>34–36</td>
-              <td>42–44</td>
-              <td>Plus / loose fit</td>
-            </tr>
+            <tr><td class="size-cell"><strong>S</strong></td><td>34–36</td><td>28–30</td><td>36–38</td><td>Petite / slim fit</td></tr>
+            <tr><td class="size-cell"><strong>M</strong></td><td>36–38</td><td>30–32</td><td>38–40</td><td>Regular fit</td></tr>
+            <tr><td class="size-cell"><strong>L</strong></td><td>38–40</td><td>32–34</td><td>40–42</td><td>Curvy / relaxed fit</td></tr>
+            <tr><td class="size-cell"><strong>XL</strong></td><td>40–42</td><td>34–36</td><td>42–44</td><td>Plus / loose fit</td></tr>
           </tbody>
         </table>
       </div>
@@ -578,7 +549,7 @@
     <section id="about" class="about-section container">
       <div class="about-grid">
         <div class="about-image-wrap">
-          <img src="assets/hero.jpg" alt="Sutraa craft" />
+          <img src="assets/hero.jpg" alt="Sutraa craft" loading="lazy" />
           <div class="about-image-caption">
             <span>Handcrafted with love in India</span>
           </div>
@@ -590,18 +561,9 @@
           <p>SUTRAA was born from a simple belief: that what you wear should feel as good as it looks. We source the finest cottons, collaborate with skilled artisans, and handcraft each piece — from tie-dye to block-print to embroidery — with patience and pride.</p>
           <p>Our name, <em>Sutraa</em>, means a thread that binds — connecting heritage craft to modern living, the artisan to the wearer, and every garment to your personal story.</p>
           <div class="about-values">
-            <div class="value-item">
-              <i class="fas fa-leaf"></i>
-              <span>Natural, breathable fabrics</span>
-            </div>
-            <div class="value-item">
-              <i class="fas fa-hands"></i>
-              <span>Artisan-crafted, no mass production</span>
-            </div>
-            <div class="value-item">
-              <i class="fas fa-gem"></i>
-              <span>Timeless silhouettes, wearable art</span>
-            </div>
+            <div class="value-item"><i class="fas fa-leaf"></i><span>Natural, breathable fabrics</span></div>
+            <div class="value-item"><i class="fas fa-hands"></i><span>Artisan-crafted, no mass production</span></div>
+            <div class="value-item"><i class="fas fa-gem"></i><span>Timeless silhouettes, wearable art</span></div>
           </div>
           <a href="#new-arrivals" class="btn btn-primary">Shop the Story</a>
         </div>
@@ -612,7 +574,7 @@
     <footer class="site-footer">
       <div class="footer-grid container">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="SUTRAA" class="footer-logo">
+          <img src="assets/logo.png" alt="SUTRAA" class="footer-logo" loading="lazy" />
           <p class="muted">Effortless Styles for Your Story. Handcrafted. Cotton. Timeless.</p>
           <div class="footer-social">
             <a href="https://www.instagram.com/sutraa.3?igsh=YzljYTk1ODg3Zg" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -696,24 +658,17 @@
         <div class="quickview-meta">
           <h3></h3>
           <div class="quickview-price"></div>
-          <div class="quickview-delivery">
-            <i class="fas fa-truck-fast"></i> Free shipping on orders above ₹499
-          </div>
+          <div class="quickview-delivery"><i class="fas fa-truck-fast"></i> Free shipping on orders above ₹499</div>
           <p class="quickview-desc muted"></p>
           <div class="qv-sizes">
             <div class="size-label">Available sizes:</div>
             <div class="size-options" role="list"></div>
           </div>
-          <div class="qv-fabric">
-            <i class="fas fa-shirt"></i>
-            <span>100% Cotton · Handcrafted · Low-impact dyes</span>
-          </div>
+          <div class="qv-fabric"><i class="fas fa-shirt"></i> <span>100% Cotton · Handcrafted · Low-impact dyes</span></div>
           <div class="qv-actions">
-            <button class="btn btn-primary">Add to Cart</button>
-            <a href="https://wa.me/c/917208815471" target="_blank" class="whatsapp-btn">
-              <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-            <button class="icon-btn-wishlist" id="qvWishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
+            <button class="btn btn-primary qv-add-cart">Add to Cart</button>
+            <a href="https://wa.me/c/917208815471" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <button class="icon-btn-wishlist qv-wishlist" aria-label="Add to wishlist"><i class="far fa-heart"></i></button>
           </div>
         </div>
       </div>
@@ -721,15 +676,63 @@
 
   </main>
 
-  <!-- ═══════════ SCrolled-to-top button ═══════════ -->
+  <!-- ═══════════ SCROLL TO TOP ═══════════ -->
   <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
   </button>
 
   <script>
+  // ── Year ──
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // ── Cart logic ──
+  // ── NAV ELEMENTS ──
+  const navWrap = document.querySelector('.nav-wrap');
+  const mobileNavToggle = document.getElementById('mobileNavToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+  let lastScrollY = 0;
+  let navTimeout;
+
+  // Hide/show navbar on scroll
+  window.addEventListener('scroll', () => {
+    const currentY = window.scrollY;
+    if (currentY > 80) {
+      navWrap.style.transform = lastScrollY > currentY ? 'translateY(0)' : 'translateY(-100%)';
+    } else {
+      navWrap.style.transform = 'translateY(0)';
+    }
+    lastScrollY = currentY;
+    clearTimeout(navTimeout);
+    navTimeout = setTimeout(() => { navWrap.style.transform = 'translateY(0)'; }, 2000);
+  });
+
+  // Mobile nav open
+  mobileNavToggle.addEventListener('click', () => {
+    mobileNav.classList.add('open');
+    mobileNav.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // Mobile nav close
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    mobileNav.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  mobileNavClose.addEventListener('click', closeMobileNav);
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target === mobileNav) closeMobileNav();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
+  });
+
+  // Close mobile nav on link click
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  // ── CART LOGIC ──
   const cart = [];
   const cartCount = document.getElementById('cartCount');
   const cartBody = document.getElementById('cartBody');
@@ -738,18 +741,22 @@
   const cartOverlay = document.getElementById('cartOverlay');
 
   function updateCart() {
-    cartCount.textContent = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
-    const total = cart.reduce((sum, item) => sum + (parseInt(item.price.replace(/[^0-9]/g, '')) || 0) * (item.qty || 1), 0);
+    const count = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
+    cartCount.textContent = count;
+    const total = cart.reduce((sum, item) => {
+      const priceNum = parseInt((item.price || '0').replace(/[^0-9]/g, ''), 10) || 0;
+      return sum + priceNum * (item.qty || 1);
+    }, 0);
     cartTotal.textContent = '₹' + total;
     if (cart.length === 0) {
       cartBody.innerHTML = '<p class="cart-empty">Your cart is empty. Start exploring our collection!</p>';
     } else {
       cartBody.innerHTML = cart.map((item, i) => `
         <div class="cart-item">
-          <img src="${item.img}" alt="${item.title}" class="cart-item-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><rect width=%2280%22 height=%2280%22 fill=%22%23d9c9b7%22/></svg>'">
+          <img src="${item.img || ''}" alt="${item.title}" class="cart-item-img" onerror="this.style.display='none'">
           <div class="cart-item-info">
             <strong>${item.title}</strong>
-            <div class="cart-item-price">₹${item.price.replace(/[^0-9]/g, '')}</div>
+            <div class="cart-item-price">₹${item.price ? item.price.replace(/[^0-9]/g, '') : '0'}</div>
             <div class="cart-item-qty">Qty: ${item.qty || 1}</div>
           </div>
           <button class="cart-item-remove" data-index="${i}" aria-label="Remove item">&times;</button>
@@ -775,25 +782,32 @@
     cartOverlay.classList.remove('open');
     cartSidebar.setAttribute('aria-hidden', 'true');
   }
-
   document.querySelector('.cart-close').addEventListener('click', closeCart);
   cartOverlay.addEventListener('click', closeCart);
 
-  // Product card "Add to Cart" via delegation
-  document.addEventListener('click', function(e) {
-    const btn = e.target.closest('.quickview-add-cart, .quickview-meta .btn-primary');
+  // Cart add from Quick View
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.qv-add-cart');
     if (btn && btn.closest('.quickview-modal') && btn.dataset.product) {
       const p = JSON.parse(btn.dataset.product);
       cart.push(p);
       updateCart();
+      const originalText = btn.textContent;
       btn.textContent = '✓ Added!';
-      setTimeout(() => { btn.textContent = 'Add to Cart'; }, 1500);
+      btn.style.pointerEvents = 'none';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.pointerEvents = '';
+      }, 1500);
       closeCart();
+      closeMobileNav();
+      // Scroll to top to show toast / banner feedback
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   });
 
-  // ── Quick View Modal ──
-  (function() {
+  // ── QUICK VIEW MODAL (FULLY WORKING) ──
+  (function () {
     const modal = document.getElementById('quickview');
     const modalImg = modal.querySelector('.quickview-img img');
     const modalTitle = modal.querySelector('.quickview-meta h3');
@@ -801,63 +815,122 @@
     const modalDesc = modal.querySelector('.quickview-desc');
     const modalSizes = modal.querySelector('.size-options');
     const modalFabric = modal.querySelector('.qv-fabric');
-    const qvWishlist = document.getElementById('qvWishlist');
+    const qvWishlist = modal.querySelector('.qv-wishlist');
+    const qvAddCart = modal.querySelector('.qv-add-cart');
+    const prevBtn = modal.querySelector('.qv-prev');
+    const nextBtn = modal.querySelector('.qv-next');
 
     function openCardInModal(card) {
       if (!card) return;
-      const img = card.querySelector('.card-media img');
-      const title = card.querySelector('.card-title')?.textContent || '';
-      const price = card.querySelector('.price')?.textContent || '';
-      const cat = card.querySelector('.card-category')?.textContent || '';
-      const desc = card.dataset.description || '';
-      const sizesArr = ['S', 'M', 'L', 'XL'];
 
+      const imgEl = card.querySelector('.card-media img');
+      const title = (card.querySelector('.card-title')?.textContent || '').trim() || '';
+      const price = (card.querySelector('.price')?.textContent || '').trim() || '';
+      const desc = (card.dataset.description || '').trim() || '';
+      const cat = (card.querySelector('.card-category')?.textContent || '').trim() || '';
+
+      // Build image list — use data-images first, fall back to single card image
       const imagesRaw = card.dataset.images || '';
-      let candidateImages = imagesRaw ? imagesRaw.split(',').map(s => s.trim()).filter(Boolean) : (img ? [img.src] : []);
-      candidateImages = candidateImages.filter(u => u.includes('://') || u.startsWith('/'));
-      if (candidateImages.length === 0 && img && img.src) candidateImages = [img.src];
+      let imageList = [];
+      if (imagesRaw) {
+        imageList = imagesRaw.split(',').map(s => s.trim()).filter(Boolean);
+      }
+      // Always ensure at least the card's own image is in the list
+      if (imgEl && imgEl.src) {
+        const cardSrc = imgEl.src;
+        if (!imageList.includes(cardSrc)) {
+          imageList.unshift(cardSrc);
+        }
+      }
+      // Deduplicate
+      imageList = [...new Set(imageList)];
 
-      function preloadAndFilter(urls, cb) {
-        if (!urls.length) return cb([]);
-        const loaded = [], checked = 0;
-        urls.forEach(u => {
+      // Preload all images before opening modal (so we don't show broken/blank)
+      const preloaded = [];
+      let loadedCount = 0;
+
+      function tryLoad(url, callback) {
+        // Skip data URIs and absolute URLs that don't start with our domain
+        const isAbsolute = url.startsWith('http://') || url.startsWith('https://');
+        const isDataUri = url.startsWith('data:');
+        const isRelative = !isAbsolute && !isDataUri;
+        if (isRelative) {
+          // Make absolute to test loadability
+          const absolute = window.location.origin + '/' + url.replace(/^\/+/, '');
           const test = new Image();
-          test.onload = () => { loaded.push(u); check(); };
-          test.onerror = () => { check(); };
-          test.src = u;
-          function check() { if (++checked === urls.length) cb(loaded); }
-        });
+          test.onload = () => { preloaded.push(url); callback(); };
+          test.onerror = () => {
+            // If relative fails, still include it — GitHub Pages handles relative paths fine
+            preloaded.push(url);
+            callback();
+          };
+          test.src = absolute;
+        } else {
+          const test = new Image();
+          test.onload = () => { preloaded.push(url); callback(); };
+          test.onerror = () => {
+            // For absolute URL failures, still include — don't block
+            preloaded.push(url);
+            callback();
+          };
+          test.src = url;
+        }
       }
 
-      preloadAndFilter(candidateImages, (images) => {
-        if (images.length === 0 && img && img.src) images = [img.src];
-        modalImg.src = images[0] || '';
+      if (imageList.length === 0) {
+        // Fallback: try a couple of common image paths
+        const possible = [
+          (imgEl && imgEl.src) || '',
+          'assets/collective.jpg',
+          'assets/hero.jpg'
+        ].filter(Boolean);
+        possible.forEach((u, i) => tryLoad(u, () => {
+          if (i === possible.length - 1) finishOpen();
+        }));
+      } else {
+        imageList.forEach((u, i) => tryLoad(u, () => {
+          if (i === imageList.length - 1) finishOpen();
+        }));
+      }
+
+      function finishOpen() {
+        if (preloaded.length === 0) {
+          // Last resort
+          preloaded.push(imgEl && imgEl.src || '');
+        }
+
+        // Set initial image
+        modalImg.src = preloaded[0] || '';
         modalImg.alt = title;
         modalImg.dataset.index = '0';
 
-        const showNav = images.length > 1;
-        const prev = modal.querySelector('.qv-prev');
-        const next = modal.querySelector('.qv-next');
-        prev.style.display = showNav ? 'flex' : 'none';
-        next.style.display = showNav ? 'flex' : 'none';
-        if (showNav) {
-          prev.onclick = () => {
-            const idx = (parseInt(modalImg.dataset.index || '0', 10) - 1 + images.length) % images.length;
-            modalImg.dataset.index = String(idx);
-            modalImg.src = images[idx];
-          };
-          next.onclick = () => {
-            const idx = (parseInt(modalImg.dataset.index || '0', 10) + 1) % images.length;
-            modalImg.dataset.index = String(idx);
-            modalImg.src = images[idx];
-          };
-        }
+        // Navigation visibility
+        const showNav = preloaded.length > 1;
+        prevBtn.style.display = showNav ? 'flex' : 'none';
+        nextBtn.style.display = showNav ? 'flex' : 'none';
 
+        // Navigation handlers
+        prevBtn.onclick = () => {
+          let idx = parseInt(modalImg.dataset.index || '0', 10);
+          idx = (idx - 1 + preloaded.length) % preloaded.length;
+          modalImg.dataset.index = String(idx);
+          modalImg.src = preloaded[idx];
+        };
+        nextBtn.onclick = () => {
+          let idx = parseInt(modalImg.dataset.index || '0', 10);
+          idx = (idx + 1) % preloaded.length;
+          modalImg.dataset.index = String(idx);
+          modalImg.src = preloaded[idx];
+        };
+
+        // Populate meta
         modalTitle.textContent = title;
         modalPrice.textContent = price;
-        modalDesc.textContent = desc;
+        modalDesc.textContent = desc || 'Handcrafted with care — each piece tells a story.';
         modalFabric.innerHTML = '<i class="fas fa-shirt"></i> <span>100% Cotton · Handcrafted · Low-impact dyes</span>';
 
+        // Size buttons
+        const sizesArr = ['S', 'M', 'L', 'XL'];
         modalSizes.innerHTML = '';
         sizesArr.forEach((sz, idx) => {
           const btn = document.createElement('button');
@@ -876,41 +949,48 @@
           modalSizes.appendChild(btn);
         });
 
-        // Add to cart button with product data
-        const addBtn = modal.querySelector('.quickview-meta .btn-primary');
-        addBtn.dataset.product = JSON.stringify({
+        // Add to Cart button with product data
+        const productData = {
           title: title,
           price: price,
-          img: images[0] || '',
+          img: preloaded[0] || '',
           qty: 1
-        });
-        addBtn.textContent = 'Add to Cart';
+        };
+        qvAddCart.dataset.product = JSON.stringify(productData);
+        qvAddCart.textContent = 'Add to Cart';
+        qvAddCart.style.pointerEvents = '';
 
-        // Wishlist toggle
+        // Wishlist toggle in modal
         qvWishlist.onclick = () => {
-          qvWishlist.querySelector('i').classList.toggle('far');
-          qvWishlist.querySelector('i').classList.toggle('fas');
-          qvWishlist.querySelector('i').classList.toggle('far');
+          const icon = qvWishlist.querySelector('i');
+          icon.classList.toggle('far');
+          icon.classList.toggle('fas');
           qvWishlist.classList.toggle('active');
         };
 
+        // Open modal
         modal.classList.add('open');
         modal.setAttribute('aria-hidden', 'false');
-      });
+        document.body.style.overflow = 'hidden';
+      }
     }
 
+    // Wire up all Quick View triggers
     document.querySelectorAll('[data-quickview="true"]').forEach(el => {
       el.addEventListener('click', (e) => {
         e.preventDefault();
-        const card = el.closest('.card') || el.closest('.creator-card') || null;
+        e.stopPropagation();
+        const card = el.closest('.card');
         if (card) openCardInModal(card);
       });
     });
 
+    // Close modal handlers
     modal.addEventListener('click', (e) => {
       if (e.target === modal || e.target.classList.contains('quickview-close')) {
         modal.classList.remove('open');
         modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
       }
     });
 
@@ -918,21 +998,21 @@
       if (e.key === 'Escape') {
         modal.classList.remove('open');
         modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
         if (cartSidebar.classList.contains('open')) closeCart();
+        if (mobileNav.classList.contains('open')) closeMobileNav();
       }
     });
+
+    // Close on backdrop scroll (safety)
+    window.addEventListener('scroll', () => {
+      if (modal.classList.contains('open')) {
+        // Allow scroll inside modal content if it overflows; otherwise prevent
+      }
+    }, { passive: true });
   })();
 
-  // ── Scroll to top ──
-  const scrollTopBtn = document.getElementById('scrollTop');
-  window.addEventListener('scroll', () => {
-    scrollTopBtn.style.opacity = window.scrollY > 400 ? 1 : 0;
-  });
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // ── Category tabs ──
+  // ── CATEGORY TABS ──
   document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -942,22 +1022,62 @@
         if (category === 'all') {
           card.style.display = '';
         } else {
-          const cats = card.dataset.category || '';
+          const cats = (card.dataset.category || '').split(' ');
           card.style.display = cats.includes(category) ? '' : 'none';
         }
       });
     });
   });
 
-  // ── Wishlist toggle on cards ──
-  document.querySelectorAll('.icon-btn-wishlist').forEach(btn => {
+  // ── WISHLIST TOGGLE (on cards) ──
+  document.querySelectorAll('[data-wishlist="true"]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       const icon = btn.querySelector('i');
       icon.classList.toggle('far');
       icon.classList.toggle('fas');
       btn.classList.toggle('active');
+      // Haptic feedback
+      btn.style.transform = 'scale(1.2)';
+      setTimeout(() => { btn.style.transform = ''; }, 200);
     });
+  });
+
+  // ── SCROLL TO TOP ──
+  const scrollTopBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      scrollTopBtn.style.opacity = '1';
+      scrollTopBtn.style.pointerEvents = 'auto';
+    } else {
+      scrollTopBtn.style.opacity = '0';
+      scrollTopBtn.style.pointerEvents = 'none';
+    }
+  });
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ── SUBSCRIBE (basic) ──
+  const subscribeBtn = document.getElementById('subscribeBtn');
+  const subscribeEmail = document.getElementById('subscribeEmail');
+  subscribeBtn.addEventListener('click', () => {
+    const email = subscribeEmail.value.trim();
+    if (email && email.includes('@')) {
+      subscribeBtn.textContent = '✓ Subscribed!';
+      subscribeBtn.style.background = '#2ecc71';
+      subscribeEmail.value = '';
+      setTimeout(() => {
+        subscribeBtn.textContent = 'Subscribe';
+        subscribeBtn.style.background = '';
+      }, 2000);
+    } else {
+      subscribeBtn.textContent = 'Please enter a valid email';
+      setTimeout(() => {
+        subscribeBtn.textContent = 'Subscribe';
+      }, 1500);
+    }
   });
   </script>
 </body>
